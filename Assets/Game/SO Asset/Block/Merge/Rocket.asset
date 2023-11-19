@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76101c9592a494464b33a42d8887f937, type: 3}
+  m_Name: Rocket
+  m_EditorClassIdentifier: 
+  id: c7c3660f-7cac-4ed9-ab90-8300677cf6eb
+  image: {fileID: 21300000, guid: 427fdd619f1f742c8917130e8da9bc26, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  GridGenerator: {fileID: 0}
+  explosionSO: {fileID: 11400000, guid: 175f5988475434035878c23644da5364, type: 2}
+  fallingSO: {fileID: 11400000, guid: 9550904dde1b342eeb588f0024d88194, type: 2}
+  fallDurationPerCell: 0.15
+  minAmount: 6
+  maxAmount: 999

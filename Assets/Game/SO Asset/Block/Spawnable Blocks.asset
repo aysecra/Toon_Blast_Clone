@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff40e903001e4e1da596bb7a15102ba, type: 3}
+  m_Name: Spawnable Blocks
+  m_EditorClassIdentifier: 
+  blockList:
+  - {fileID: 11400000, guid: ccaa7ffd5b0ee4354b155e67335e8ad1, type: 2}
+  - {fileID: 11400000, guid: c7cb0aaa41eff4e95b0f128c72332610, type: 2}
+  - {fileID: 11400000, guid: 0acebdc127ed14858a4535d2227c19ac, type: 2}
+  - {fileID: 11400000, guid: 58b0ab212cccb4de29c6059fb998377f, type: 2}
+  - {fileID: 11400000, guid: eaa5b982fb51d4e6185961da9f353ec6, type: 2}
+  randomSeed: 2
