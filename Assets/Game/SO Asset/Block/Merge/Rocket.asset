@@ -18,6 +18,6 @@ MonoBehaviour:
   GridGenerator: {fileID: 0}
   explosionSO: {fileID: 11400000, guid: 175f5988475434035878c23644da5364, type: 2}
   fallingSO: {fileID: 11400000, guid: 9550904dde1b342eeb588f0024d88194, type: 2}
-  fallDurationPerCell: 0.15
+  fallDurationPerCell: 0.075
   minAmount: 6
   maxAmount: 999

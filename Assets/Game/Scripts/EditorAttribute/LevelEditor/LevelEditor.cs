@@ -39,7 +39,7 @@ namespace ToonBlastClone.Editor
             _placeableBlockList = _gameBoard.PlaceableBlock.BlockList;
             List<BlockIndexData> indexDatas = _gameBoard.GridSo.GetGridData();
             
-            if (indexDatas != null && indexDatas.Count > 0)
+            if (indexDatas is {Count: > 0})
             {
                 _indexDatas = indexDatas;
 
@@ -62,59 +62,56 @@ namespace ToonBlastClone.Editor
 
         void OnGUI()
         {
-            if (_gameBoard != null)
+            if (_gameBoard == null || _gridBlockArray == null) return;
+            
+            Vector2Int prevCellAmount = _cellAmount;
+            _cellAmount = EditorGUILayout.Vector2IntField("Cell  amount:", _cellAmount);
+
+            if (prevCellAmount != _cellAmount)
             {
-                Vector2Int prevCellAmount = _cellAmount;
-                _cellAmount = EditorGUILayout.Vector2IntField("Cell  amount:", _cellAmount);
-
-                if (prevCellAmount != _cellAmount)
-                {
-                    _gameBoard.GridSo.SetCellAmount(_cellAmount);
-                    ClearArray();
-                }
-
-                PlaceableCells();
-
-
-                GUIStyle guiStyle = EditorStyles.miniButtonMid;
-                guiStyle.margin = new RectOffset(0, 0, 10, 0);
-
-                EditorGUILayout.BeginHorizontal();
-                // GUILayout.Space(EditorGUIUtility.labelWidth * .25f);
-
-                if (GUILayout.Button("Generate", guiStyle))
-                {
-                    SetIndexDatas();
-                    _gameBoard.Generate(_indexDatas);
-                }
-
-                if (GUILayout.Button("Random Generate", guiStyle))
-                {
-                    _gameBoard.SpawnableBlock.ChangeRandomSeed();
-                    _indexDatas = _gameBoard.RandomGenerate();
-                    
-                    foreach (var indexData in _indexDatas)
-                    {
-                        _gridBlockArray[indexData.GridIndex.x, indexData.GridIndex.y] =
-                            _placeableBlockList[indexData.PlaceableIndex];
-                        _indexArray[indexData.GridIndex.x, indexData.GridIndex.y] =
-                            indexData.PlaceableIndex;
-                    }
-                }
-
-                if (GUILayout.Button("Clear", guiStyle))
-                {
-                    _gameBoard.ClearCell();
-                    ClearArray();
-                }
-
-                EditorGUILayout.EndHorizontal();
-
-                BeginWindows();
-                Vector2 windowSize = new Vector2(_cellAmount.x * _cellSize.x + 30, _cellAmount.y * _cellSize.y + 50);
-                GUILayout.Window(0, new Rect(15, 200, windowSize.x, windowSize.y), LevelView, "Level View");
-                EndWindows();
+                ClearArray();
             }
+
+            PlaceableCells();
+
+
+            GUIStyle guiStyle = EditorStyles.miniButtonMid;
+            guiStyle.margin = new RectOffset(0, 0, 10, 0);
+
+            EditorGUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("Generate", guiStyle))
+            {
+                SetIndexDatas();
+                _gameBoard.Generate(_indexDatas, _cellAmount);
+            }
+
+            if (GUILayout.Button("Random Generate", guiStyle))
+            {
+                _gameBoard.SpawnableBlock.ChangeRandomSeed();
+                _indexDatas = _gameBoard.RandomGenerate();
+
+                foreach (var indexData in _indexDatas)
+                {
+                    _gridBlockArray[indexData.GridIndex.x, indexData.GridIndex.y] =
+                        _placeableBlockList[indexData.PlaceableIndex];
+                    _indexArray[indexData.GridIndex.x, indexData.GridIndex.y] =
+                        indexData.PlaceableIndex;
+                }
+            }
+
+            if (GUILayout.Button("Clear", guiStyle))
+            {
+                _gameBoard.ClearCell();
+                ClearArray();
+            }
+
+            EditorGUILayout.EndHorizontal();
+
+            BeginWindows();
+            Vector2 windowSize = new Vector2(_cellAmount.x * _cellSize.x + 30, _cellAmount.y * _cellSize.y + 50);
+            GUILayout.Window(0, new Rect(15, 200, windowSize.x, windowSize.y), LevelView, "Level View");
+            EndWindows();
         }
 
         void PlaceableCells()
@@ -150,11 +147,9 @@ namespace ToonBlastClone.Editor
                     if (GUILayout.Button(_gridBlockArray[x, y].Image.texture,
                             GUILayout.Width(_cellSize.x), GUILayout.Height(_cellSize.y)))
                     {
-                        if (selectedBlock != null)
-                        {
-                            _gridBlockArray[x, y] = selectedBlock;
-                            _indexArray[x, y] = selectedIndex;
-                        }
+                        if (selectedBlock == null) continue;
+                        _gridBlockArray[x, y] = selectedBlock;
+                        _indexArray[x, y] = selectedIndex;
                     }
                 }
 
@@ -201,7 +196,7 @@ namespace ToonBlastClone.Editor
                 }
             }
 
-            _gameBoard.Generate(_indexDatas);
+            _gameBoard.Generate(_indexDatas, _cellAmount);
         }
     }
 #endif

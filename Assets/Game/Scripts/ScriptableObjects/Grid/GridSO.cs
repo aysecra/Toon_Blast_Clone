@@ -21,56 +21,24 @@ namespace ToonBlastClone.ScriptableObjects
 
         public Vector2 GridCellSize => gridCellSize;
 
-        public void SetCellAmount(Vector2Int amount)
+        public void SetGridData(Vector2Int amount, List<BlockIndexData> gridData)
         {
             cellAmount = amount;
-
-            if (_levelData == null)
+            if (_gameData == null || _levelData == null)
             {
                 LoadData();
             }
 
-            bool isContain = false;
-            for (int i = 0; i < _gameData.LevelDataList.Count; i++)
+            bool isContain = _gameData is {LevelDataList: not null} && _levelData != null;
+            if (isContain)
             {
-                if (_gameData.LevelDataList[i].GridSoName.Equals(this.name))
-                {
-                    _gameData.LevelDataList[i].CellAmount = cellAmount;
-                    _gameData.LevelDataList[i].GridData = new List<BlockIndexData>();
-                }
-            }
-
-            if (!isContain)
-            {
-                _levelData = new LevelData()
-                {
-                    CellAmount = cellAmount,
-                    GridData = new List<BlockIndexData>(),
-                    GridSoName = this.name
-                };
-
-                _gameData.LevelDataList ??= new List<LevelData>();
+                _levelData.GridData = gridData;
+                _levelData.CellAmount = amount;
                 
-                _gameData.LevelDataList.Add(_levelData);
-                SaveData();
-            }
-
-            LoadData();
-        }
-
-        public void SetGridData(List<BlockIndexData> gridData)
-        {
-            if (_levelData == null)
-            {
-                LoadData();
-            }
-            
-            bool isContain = false;
-            for (int i = 0; i < _gameData.LevelDataList.Count; i++)
-            {
-                if (_gameData.LevelDataList[i].GridSoName.Equals(this.name))
+                foreach (var levelData in _gameData!.LevelDataList!.Where(t => t.GridSoName.Equals(this.name)))
                 {
-                    _gameData.LevelDataList[i].GridData = gridData;
+                    levelData.GridData = gridData;
+                    levelData.CellAmount = amount;
                 }
             }
 
@@ -78,37 +46,42 @@ namespace ToonBlastClone.ScriptableObjects
             {
                 _levelData = new LevelData()
                 {
-                    CellAmount = cellAmount,
+                    CellAmount = amount,
                     GridData = gridData,
                     GridSoName = this.name
                 };
 
-                _gameData.LevelDataList ??= new List<LevelData>();
-                
-                _gameData.LevelDataList.Add(_levelData);
-                SaveData();
+                _gameData.LevelDataList ??= new List<LevelData> {_levelData};
             }
 
+            SaveData();
             LoadData();
         }
 
         public List<BlockIndexData> GetGridData()
         {
-            if (_levelData == null)
-                LoadData();
-            return _levelData.GridData;
+            LoadData();
+            return _levelData!.GridData;
         }
 
         private void SaveData()
         {
-            gameSettings.SaveToJSON(_gameData);
+            for (int i = 0; i < _gameData.LevelDataList.Count; i++)
+            {
+                if (!_gameData.LevelDataList[i].GridSoName.Equals(this.name)) continue;
+                _gameData.LevelDataList[i] = _levelData;
+                break;
+            }
+
+            GameSettings.SaveToJSON(_gameData);
         }
 
         private void LoadData()
         {
-            GameData gameData = gameSettings.LoadFromJSON<GameData>();
+            GameData gameData = GameSettings.LoadFromJSON<GameData>();
 
-            if (gameData == default)
+            // null gameData condition
+            if (gameData == null)
             {
                 _gameData = new GameData()
                 {
@@ -120,36 +93,35 @@ namespace ToonBlastClone.ScriptableObjects
                     GridData = new List<BlockIndexData>(),
                     GridSoName = this.name
                 };
-
-                _gameData.LevelDataList.Add(_levelData);
-                SaveData();
             }
 
+
+            // control level data is contain
             bool isContain = false;
-            foreach (var levelData in gameData.LevelDataList)
-            {
-                if (levelData.GridSoName.Equals(this.name))
+
+            if (gameData is {LevelDataList: not null})
+                foreach (var levelData in gameData!.LevelDataList.Where(levelData =>
+                             levelData.GridSoName.Equals(this.name)))
                 {
                     _levelData = levelData;
+                    cellAmount = levelData.CellAmount;
                     isContain = true;
                     break;
                 }
-            }
 
-            if (!isContain)
+            if (isContain) return;
+
+            // level data not contain
+            _levelData = new LevelData()
             {
-                _levelData = new LevelData()
-                {
-                    CellAmount = cellAmount,
-                    GridData = new List<BlockIndexData>(),
-                    GridSoName = this.name
-                };
+                CellAmount = cellAmount,
+                GridData = new List<BlockIndexData>(),
+                GridSoName = this.name
+            };
 
-                _gameData.LevelDataList ??= new List<LevelData>();
-                
-                _gameData.LevelDataList.Add(_levelData);
-                SaveData();
-            }
+            _gameData.LevelDataList ??= new List<LevelData>();
+
+            _gameData.LevelDataList.Add(_levelData);
         }
 
         private void SaveSO()

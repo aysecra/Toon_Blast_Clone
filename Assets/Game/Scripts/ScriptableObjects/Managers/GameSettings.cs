@@ -27,35 +27,37 @@ namespace ToonBlastClone.ScriptableObjects
             }
         }
 
-        private string SavedSettingsPath => System.IO.Path.Combine(Application.persistentDataPath, "GameSettings.json");
+        private static string SavedSettingsPath => Path.Combine(Application.dataPath, "Data/GameSettings.json");
 
 
-        public T LoadFromJSON<T>()
+        public static T LoadFromJSON<T>()
         {
-            if (File.Exists(SavedSettingsPath))
+            string dirPath = $"{Application.dataPath}/Data/";
+
+            if (Directory.Exists(dirPath))
             {
                 string loadPlayerData = File.ReadAllText(SavedSettingsPath);
-                T result =  JsonUtility.FromJson<T>(loadPlayerData);
+                T result = JsonUtility.FromJson<T>(loadPlayerData);
                 return result;
             }
 
+            Directory.CreateDirectory(dirPath);
             return default;
         }
 
-        public void SaveToJSON<T>(T saveData)
+        public static void SaveToJSON<T>(T saveData)
         {
-            var folderPath = Application.persistentDataPath;
-
-            if (!Directory.Exists(folderPath))
+            string dirPath = $"{Application.dataPath}/Data/";
+            if (!Directory.Exists(dirPath))
             {
-                Directory.CreateDirectory(folderPath);
+                Directory.CreateDirectory(dirPath);
             }
             
             string saveContent = JsonUtility.ToJson(saveData);
-            System.IO.File.WriteAllText(SavedSettingsPath, saveContent);
+            File.WriteAllText(SavedSettingsPath, saveContent);
         }
 
-        public static void InitializeFromDefault(GameSettings settings)
+        private static void InitializeFromDefault(GameSettings settings)
         {
             if (_instance) DestroyImmediate(_instance);
             _instance = Instantiate(settings);

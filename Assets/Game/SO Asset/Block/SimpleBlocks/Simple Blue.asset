@@ -19,5 +19,5 @@ MonoBehaviour:
   explosionSO: {fileID: 11400000, guid: 26f6415a5cc764388afcaab9251a247c, type: 2}
   fallingSO: {fileID: 11400000, guid: 9550904dde1b342eeb588f0024d88194, type: 2}
   spawningSO: {fileID: 11400000, guid: 76510609c6c45446789695ce95525ddf, type: 2}
-  fallDurationPerCell: 0.15
+  fallDurationPerCell: 0.075
   collectAudio: {fileID: 11400000, guid: d1956a81de1d843aca68474d80041c7a, type: 2}

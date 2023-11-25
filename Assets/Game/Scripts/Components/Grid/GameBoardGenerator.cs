@@ -35,10 +35,17 @@ namespace ToonBlastClone.Components
             List<BlockIndexData> indexDatas = gridSO.GetGridData();
             indexDatas = indexDatas.OrderBy(indexData => indexData.GridIndex.x).ToList();
             indexDatas = indexDatas.OrderBy(indexData => indexData.GridIndex.y).ToList();
-            
+
+            // print(indexDatas.Count);
+            // foreach (var index in indexDatas)
+            // {
+            //     print(index.GridIndex + " ---> " + index.PlaceableIndex);
+            // }
+
             Vector3 currPos = cellDownLeftPoint.position;
             int i = 0;
 
+            if (indexDatas.Count <= 0) return;
             for (int y = 0; y < GridModel!.CellAmount.y; y++)
             {
                 for (int x = 0; x < GridModel!.CellAmount.x; x++)
@@ -128,6 +135,8 @@ namespace ToonBlastClone.Components
         {
             foreach (var cell in _gridModel!.CellArray)
             {
+                if (cell == null) continue;
+                
                 Vector2Int index = cell.Index;
 
                 // get down neighbor

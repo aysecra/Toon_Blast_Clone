@@ -20,7 +20,7 @@ namespace ToonBlastClone.Components
         [SerializeField] protected Transform cellDownLeftPoint;
 
         protected GridModel<GridGenerator> _gridModel;
-        protected GameObject _cellPrefab;
+        private GameObject _cellPrefab;
 
         public GridModel<GridGenerator> GridModel => _gridModel;
 
@@ -39,7 +39,7 @@ namespace ToonBlastClone.Components
             OpenGrid();
         }
 
-        void GetData()
+        private void GetData()
         {
             _gridModel ??= new GridModel<GridGenerator>(this);
 
@@ -54,7 +54,7 @@ namespace ToonBlastClone.Components
             ClearCell(target);
         }
 
-        void InstantiateObjects(int target)
+        private void InstantiateObjects(int target)
         {
             while (cellParent.childCount < target)
             {
@@ -69,7 +69,7 @@ namespace ToonBlastClone.Components
             }
         }
 
-        void SetModel()
+        private void SetModel()
         {
             if (_gridModel.SpriteRendererPool.Count == 0)
             {
@@ -97,9 +97,10 @@ namespace ToonBlastClone.Components
             return grid.CellToWorld(cellPos);
         }
 
-        void OpenGrid()
+        private void OpenGrid()
         {
-            if (gridSO.GetGridData() != null || gridSO.GetGridData().Count > 0)
+            List<BlockIndexData> gridData = gridSO.GetGridData();
+            if (gridData is {Count: > 0})
             {
                 GetData();
                 SetModel();
@@ -113,9 +114,9 @@ namespace ToonBlastClone.Components
             }
         }
 
-        public void Generate(List<BlockIndexData> generatedArray)
+        public void Generate(List<BlockIndexData> generatedArray, Vector2Int cellAmount)
         {
-            gridSO.SetGridData(generatedArray);
+            gridSO.SetGridData(cellAmount, generatedArray);
             GetData();
             SetModel();
             GridModel?.SetCellArray(this, new CellData[GridModel!.CellAmount.x, GridModel!.CellAmount.y]);
@@ -136,7 +137,7 @@ namespace ToonBlastClone.Components
             SetModel();
             GridModel?.SetCellArray(this, new CellData[GridModel!.CellAmount.x, GridModel!.CellAmount.y]);
             List<BlockIndexData> result = SetRandomCell();
-            gridSO.SetGridData(result);
+            gridSO.SetGridData(GridModel!.CellAmount, result);
             SetNeigbors();
 
 #if UNITY_EDITOR
