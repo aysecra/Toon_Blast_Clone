@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b4031d82d30d42aea09e6f472c74b89, type: 2}
   m_sharedMaterial: {fileID: -4498874657240439506, guid: 0b4031d82d30d42aea09e6f472c74b89, type: 2}
@@ -261,12 +261,6 @@ MonoBehaviour:
   - GoalImage: {fileID: 782689502172786362}
     GoalText: {fileID: 782689502285809231}
   moveText: {fileID: 782689501908287568}
-  goalList:
-  - BlockType: {fileID: 11400000, guid: b92d5faa8298a4e5eb203bffe000d79e, type: 2}
-    BlockCount: 6
-  - BlockType: {fileID: 11400000, guid: 8dc49f680213840338424a0d268c3e2b, type: 2}
-    BlockCount: 6
-  moveCount: 25
 --- !u!82 &531975119894011475
 AudioSource:
   m_ObjectHideFlags: 0
@@ -430,7 +424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8e03258923300407ab1591376d26ed1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b44c4b4458f784ba5b4cf9d6efd7ad68, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -457,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &782689502172786363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -873,7 +867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0142024dc0bad4b488d292601f602376, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42edfe30c02d241ae89584b7bb000267, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -986,7 +980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b4031d82d30d42aea09e6f472c74b89, type: 2}
   m_sharedMaterial: {fileID: -4498874657240439506, guid: 0b4031d82d30d42aea09e6f472c74b89, type: 2}
@@ -1263,7 +1257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b4031d82d30d42aea09e6f472c74b89, type: 2}
   m_sharedMaterial: {fileID: -4498874657240439506, guid: 0b4031d82d30d42aea09e6f472c74b89, type: 2}

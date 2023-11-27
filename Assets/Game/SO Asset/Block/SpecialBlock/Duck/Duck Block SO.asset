@@ -18,4 +18,4 @@ MonoBehaviour:
   GridGenerator: {fileID: 0}
   fallingSO: {fileID: 11400000, guid: f414a9b75c6df400a81a9aaafe6c4ade, type: 2}
   explosionSO: {fileID: 11400000, guid: fd51f85d266db4ca5ba68f0caeca9c21, type: 2}
-  fallDurationPerCell: 0.075
+  fallDurationPerCell: 0.05

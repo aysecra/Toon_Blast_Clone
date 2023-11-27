@@ -36,12 +36,6 @@ namespace ToonBlastClone.Components
             indexDatas = indexDatas.OrderBy(indexData => indexData.GridIndex.x).ToList();
             indexDatas = indexDatas.OrderBy(indexData => indexData.GridIndex.y).ToList();
 
-            // print(indexDatas.Count);
-            // foreach (var index in indexDatas)
-            // {
-            //     print(index.GridIndex + " ---> " + index.PlaceableIndex);
-            // }
-
             Vector3 currPos = cellDownLeftPoint.position;
             int i = 0;
 
@@ -81,10 +75,33 @@ namespace ToonBlastClone.Components
             }
         }
 
-        public override List<BlockIndexData> SetRandomCell()
+        public override List<BlockIndexData> SetRandomCell(List<GoalBlockData> goalList,
+            out List<GoalBlockData> resultGoalList)
         {
             SetBorder();
             Vector3 currPos = cellDownLeftPoint.position;
+            resultGoalList = null;
+
+            if (goalList == null)
+            {
+                if (placeableBlock.BlockList.Count > 2)
+                {
+                    resultGoalList = new List<GoalBlockData>();
+                    for (int i = 0; i < 2; i++)
+                    {
+                        resultGoalList.Add(new GoalBlockData()
+                        {
+                            BlockType = placeableBlock.BlockList[i],
+                            BlockCount = 25
+                        });
+                    }
+                }
+            }
+            else
+            {
+                resultGoalList = goalList;
+            }
+
             spawnableBlock.InitRandom();
 
             List<BlockIndexData> result = new List<BlockIndexData>();
@@ -136,7 +153,7 @@ namespace ToonBlastClone.Components
             foreach (var cell in _gridModel!.CellArray)
             {
                 if (cell == null) continue;
-                
+
                 Vector2Int index = cell.Index;
 
                 // get down neighbor

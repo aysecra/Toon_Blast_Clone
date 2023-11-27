@@ -9,21 +9,25 @@ namespace ToonBlastClone.ScriptableObjects
     public class GridSO : ScriptableObject
     {
         [SerializeField] private GameSettings gameSettings;
-        [SerializeField] private Vector2Int cellAmount = Vector2Int.one;
         [SerializeField] private Vector2 gridCellSize = Vector2.one;
         [SerializeField] private GameObject cellPrefab;
+        
+        private Vector2Int _cellAmount = Vector2Int.one;
         private LevelData _levelData;
         private GameData _gameData;
+        private int _moveCount;
 
-        public Vector2Int CellAmount => cellAmount;
+        public Vector2Int CellAmount => _cellAmount;
 
         public GameObject CellPrefab => cellPrefab;
 
         public Vector2 GridCellSize => gridCellSize;
 
-        public void SetGridData(Vector2Int amount, List<BlockIndexData> gridData)
+        public int MoveCount => _moveCount;
+
+        public void SetGridData(Vector2Int amount, List<BlockIndexData> gridData, List<GoalBlockData> goalList, int moveCount)
         {
-            cellAmount = amount;
+            _cellAmount = amount;
             if (_gameData == null || _levelData == null)
             {
                 LoadData();
@@ -34,11 +38,15 @@ namespace ToonBlastClone.ScriptableObjects
             {
                 _levelData.GridData = gridData;
                 _levelData.CellAmount = amount;
+                _levelData.Goals = goalList;
+                _levelData.MoveCount = moveCount;
                 
                 foreach (var levelData in _gameData!.LevelDataList!.Where(t => t.GridSoName.Equals(this.name)))
                 {
                     levelData.GridData = gridData;
                     levelData.CellAmount = amount;
+                    levelData.Goals = goalList;
+                    levelData.MoveCount = moveCount;
                 }
             }
 
@@ -48,10 +56,12 @@ namespace ToonBlastClone.ScriptableObjects
                 {
                     CellAmount = amount,
                     GridData = gridData,
+                    Goals = goalList,
+                    MoveCount = moveCount,
                     GridSoName = this.name
                 };
 
-                _gameData.LevelDataList ??= new List<LevelData> {_levelData};
+                _gameData!.LevelDataList ??= new List<LevelData> {_levelData};
             }
 
             SaveData();
@@ -61,7 +71,15 @@ namespace ToonBlastClone.ScriptableObjects
         public List<BlockIndexData> GetGridData()
         {
             LoadData();
+            _cellAmount = _levelData!.CellAmount;
+            _moveCount = _levelData!.MoveCount;
             return _levelData!.GridData;
+        }
+        
+        public LevelData GetLevelData()
+        {
+            LoadData();
+            return _levelData;
         }
 
         private void SaveData()
@@ -89,7 +107,7 @@ namespace ToonBlastClone.ScriptableObjects
                 };
                 _levelData = new LevelData()
                 {
-                    CellAmount = cellAmount,
+                    CellAmount = _cellAmount,
                     GridData = new List<BlockIndexData>(),
                     GridSoName = this.name
                 };
@@ -104,7 +122,7 @@ namespace ToonBlastClone.ScriptableObjects
                              levelData.GridSoName.Equals(this.name)))
                 {
                     _levelData = levelData;
-                    cellAmount = levelData.CellAmount;
+                    _cellAmount = levelData.CellAmount;
                     isContain = true;
                     break;
                 }
@@ -114,7 +132,7 @@ namespace ToonBlastClone.ScriptableObjects
             // level data not contain
             _levelData = new LevelData()
             {
-                CellAmount = cellAmount,
+                CellAmount = _cellAmount,
                 GridData = new List<BlockIndexData>(),
                 GridSoName = this.name
             };

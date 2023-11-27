@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using ToonBlastClone.Components;
 using ToonBlastClone.Data;
 using ToonBlastClone.ScriptableObjects;
@@ -23,9 +24,13 @@ namespace ToonBlastClone.Editor
         readonly Vector2 _scrollSize = new Vector2(2000, 2000);
         private Vector2 _cellSize = new Vector2(35, 35);
         private Vector2Int _cellAmount;
+        private int[] _selectedGoal = new int[3];
+        private int[] _goalAmount = new int[3];
+        private GoalBlockData[] goalArray = new GoalBlockData[3];
+        private int _moveCount;
 
         [MenuItem("Window/Level Editor")]
-        static void Init()
+        private static void Init()
         {
             LevelEditor window = (LevelEditor) EditorWindow.GetWindow(typeof(LevelEditor));
             window.name = "Level Editor";
@@ -34,11 +39,19 @@ namespace ToonBlastClone.Editor
 
         private void Awake()
         {
+            for (int i = 0; i < _selectedGoal.Length; i++)
+            {
+                _selectedGoal[i] = 0;
+            }
+
             _gameBoard = GameObject.FindObjectOfType<GameBoardGenerator>();
-            _cellAmount = _gameBoard.GridSo.CellAmount;
+            GridSO gridSO = _gameBoard.GridSo;
             _placeableBlockList = _gameBoard.PlaceableBlock.BlockList;
-            List<BlockIndexData> indexDatas = _gameBoard.GridSo.GetGridData();
-            
+            gridSO = _gameBoard.GridSo;
+            List<BlockIndexData> indexDatas = gridSO.GetGridData();
+            _cellAmount = gridSO.CellAmount;
+            _moveCount = gridSO.MoveCount;
+
             if (indexDatas is {Count: > 0})
             {
                 _indexDatas = indexDatas;
@@ -60,10 +73,12 @@ namespace ToonBlastClone.Editor
             }
         }
 
-        void OnGUI()
+        private void OnGUI()
         {
             if (_gameBoard == null || _gridBlockArray == null) return;
-            
+
+            GoalView();
+
             Vector2Int prevCellAmount = _cellAmount;
             _cellAmount = EditorGUILayout.Vector2IntField("Cell  amount:", _cellAmount);
 
@@ -74,7 +89,6 @@ namespace ToonBlastClone.Editor
 
             PlaceableCells();
 
-
             GUIStyle guiStyle = EditorStyles.miniButtonMid;
             guiStyle.margin = new RectOffset(0, 0, 10, 0);
 
@@ -83,7 +97,7 @@ namespace ToonBlastClone.Editor
             if (GUILayout.Button("Generate", guiStyle))
             {
                 SetIndexDatas();
-                _gameBoard.Generate(_indexDatas, _cellAmount);
+                _gameBoard.Generate(_indexDatas, _cellAmount, goalArray.ToList(), _moveCount);
             }
 
             if (GUILayout.Button("Random Generate", guiStyle))
@@ -109,12 +123,12 @@ namespace ToonBlastClone.Editor
             EditorGUILayout.EndHorizontal();
 
             BeginWindows();
-            Vector2 windowSize = new Vector2(_cellAmount.x * _cellSize.x + 30, _cellAmount.y * _cellSize.y + 50);
-            GUILayout.Window(0, new Rect(15, 200, windowSize.x, windowSize.y), LevelView, "Level View");
+            Vector2 windowSize = new Vector2(_cellAmount.x * _cellSize.x + 50, _cellAmount.y * _cellSize.y + 360);
+            GUILayout.Window(0, new Rect(50, 350, windowSize.x, windowSize.y), LevelView, "Level View");
             EndWindows();
         }
 
-        void PlaceableCells()
+        private void PlaceableCells()
         {
             GUILayout.Label("Placeable Block Types");
             GUILayout.BeginHorizontal();
@@ -135,7 +149,7 @@ namespace ToonBlastClone.Editor
             GUILayout.Label($"Selected Block: {selectedText}");
         }
 
-        void LevelView(int winID)
+        private void LevelView(int winID)
         {
             GUI.BeginGroup(new Rect(_panner, _scrollSize));
 
@@ -159,7 +173,33 @@ namespace ToonBlastClone.Editor
             GUI.EndGroup();
         }
 
-        void SetIndexDatas()
+        private void GoalView()
+        {
+            _moveCount = EditorGUILayout.IntField("Move Count: ", _moveCount);
+            
+            string[] options = new string[_placeableBlockList.Count + 1];
+            options[0] = "None";
+
+            for (int i = 0; i < _placeableBlockList.Count; i++)
+            {
+                options[i + 1] = _placeableBlockList[i].name;
+            }
+
+            for (int i = 0; i < _selectedGoal.Length; i++)
+            {
+                _selectedGoal[i] = EditorGUILayout.Popup($"{i + 1} - Goal: ", _selectedGoal[i], options);
+
+                EditorGUILayout.BeginHorizontal();
+                Texture2D img = _selectedGoal[i] - 1 >= 0
+                    ? _placeableBlockList[_selectedGoal[i] - 1].Image.texture
+                    : default;
+                GUILayout.Label(img, GUILayout.Width(_cellSize.x), GUILayout.Height(_cellSize.y));
+                _goalAmount[i] = EditorGUILayout.IntField("Amount: ", _goalAmount[i]);
+                EditorGUILayout.EndHorizontal();
+            }
+        }
+
+        private void SetIndexDatas()
         {
             _indexDatas.Clear();
 
@@ -176,7 +216,7 @@ namespace ToonBlastClone.Editor
             }
         }
 
-        void ClearArray()
+        private void ClearArray()
         {
             _gridBlockArray = new BlockSO[_cellAmount.x, _cellAmount.y];
             _indexArray = new int[_cellAmount.x, _cellAmount.y];
@@ -196,7 +236,7 @@ namespace ToonBlastClone.Editor
                 }
             }
 
-            _gameBoard.Generate(_indexDatas, _cellAmount);
+            _gameBoard.Generate(_indexDatas, _cellAmount, null);
         }
     }
 #endif

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ToonBlastClone.Data;
 using ToonBlastClone.Logic;
 using ToonBlastClone.ScriptableObjects;
+using ToonBlastClone.Structs.Event;
 #if UNITY_EDITOR
 using UnityEditor.SceneManagement;
 #endif
@@ -28,7 +29,7 @@ namespace ToonBlastClone.Components
 
         protected abstract void SetCell();
 
-        public abstract List<BlockIndexData> SetRandomCell();
+        public abstract List<BlockIndexData> SetRandomCell(List<GoalBlockData> goalList, out List<GoalBlockData> resultGoalList);
 
         protected abstract void SetNeigbors();
 
@@ -114,14 +115,18 @@ namespace ToonBlastClone.Components
             }
         }
 
-        public void Generate(List<BlockIndexData> generatedArray, Vector2Int cellAmount)
+        public void Generate(List<BlockIndexData> generatedArray, Vector2Int cellAmount, List<GoalBlockData> goalList, int moveCount = 25)
         {
-            gridSO.SetGridData(cellAmount, generatedArray);
+            gridSO.SetGridData(cellAmount, generatedArray, goalList, moveCount);
             GetData();
             SetModel();
             GridModel?.SetCellArray(this, new CellData[GridModel!.CellAmount.x, GridModel!.CellAmount.y]);
             SetCell();
             SetNeigbors();
+            EventManager.TriggerEvent(new LevelUIDataEvent()
+            {
+                LevelData = gridSO.GetLevelData()
+            });
 
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -131,14 +136,20 @@ namespace ToonBlastClone.Components
 #endif
         }
 
-        public List<BlockIndexData> RandomGenerate()
+        public List<BlockIndexData> RandomGenerate(List<GoalBlockData> goalList = null, int moveCount = 25)
         {
             GetData();
             SetModel();
             GridModel?.SetCellArray(this, new CellData[GridModel!.CellAmount.x, GridModel!.CellAmount.y]);
-            List<BlockIndexData> result = SetRandomCell();
-            gridSO.SetGridData(GridModel!.CellAmount, result);
+            List<BlockIndexData> result = SetRandomCell(goalList, out goalList);
+            
+            gridSO.SetGridData(GridModel!.CellAmount, result, goalList, moveCount);
             SetNeigbors();
+            
+            EventManager.TriggerEvent(new LevelUIDataEvent()
+            {
+                LevelData = gridSO.GetLevelData()
+            });
 
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -149,7 +160,7 @@ namespace ToonBlastClone.Components
 
             return result;
         }
-
+        
         public void ClearCell(int target = 0)
         {
             while (cellParent.childCount > target)

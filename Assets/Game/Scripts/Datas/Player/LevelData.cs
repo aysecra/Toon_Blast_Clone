@@ -9,6 +9,8 @@ namespace ToonBlastClone.Data
     {
         public string GridSoName;
         public Vector2Int CellAmount;
+        public int MoveCount;
+        public List<GoalBlockData> Goals;
         public List<BlockIndexData> GridData;
     }
 }
