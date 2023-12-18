@@ -73,7 +73,7 @@ namespace ToonBlastClone.ScriptableObjects
             explodedCell.IsEmpty = true;
             explodedCell.BlockSO = null;
             explodedCell.CellObject = null;
-
+            
             tween = blockObject.transform.DOScale(.1f, explodeDelay)
                 .OnStart((() =>
                 {

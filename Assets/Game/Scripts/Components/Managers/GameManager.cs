@@ -1,3 +1,4 @@
+using DG.Tweening;
 using ToonBlastClone.Components.Patterns;
 using ToonBlastClone.Enums;
 using ToonBlastClone.Logic;
@@ -15,18 +16,24 @@ namespace ToonBlastClone.Components.Manager
 
         public void SetLevelCompleted()
         {
+            SharedLevelManager.Instance.ClearAll();
+            DOTween.KillAll();
             LoadNextLevel();
         }
+
         public void SetLevelFailed()
         {
+            SharedLevelManager.Instance.ClearAll();
+            DOTween.KillAll();
             ReloadLevel();
         }
-        
+
         private void LoadNextLevel()
         {
             EventManager.TriggerEvent(new LevelEvent(LevelState.Completed));
             string nextLevel = ProgressManager.Instance.GetNextLevelName();
             SceneManager.LoadScene(nextLevel);
+            EventManager.TriggerEvent(new LevelEvent(LevelState.Opened));
         }
 
         private void ReloadLevel()
@@ -34,6 +41,7 @@ namespace ToonBlastClone.Components.Manager
             EventManager.TriggerEvent(new LevelEvent(LevelState.Failed));
             string currLevel = ProgressManager.Instance.GetCurrentLevelName();
             SceneManager.LoadScene(currLevel);
+            EventManager.TriggerEvent(new LevelEvent(LevelState.Opened));
         }
     }
 }

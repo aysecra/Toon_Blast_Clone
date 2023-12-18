@@ -108,6 +108,11 @@ namespace ToonBlastClone.Components
                 GridModel?.SetCellArray(this, new CellData[GridModel!.CellAmount.x, GridModel!.CellAmount.y]);
                 SetCell();
                 SetNeigbors();
+                
+                EventManager.TriggerEvent(new LevelUIDataEvent()
+                {
+                    LevelData = gridSO.GetLevelData()
+                });
             }
             else
             {

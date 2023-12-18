@@ -24,7 +24,7 @@ namespace ToonBlastClone.ScriptableObjects
             fallenCell.BlockSO = null;
 
             Tween tween = null;
-
+            
             tween = fallenObject.transform
                 .DOMove(targetPosition, (fallenCell.Index.y - targetCell.Index.y) * fallDurationPerCell)
                 .OnComplete((() => { tween.Kill(); }));

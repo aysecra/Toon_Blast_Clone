@@ -12,6 +12,7 @@ namespace ToonBlastClone.Components.Patterns
         
         protected List<GameObject> _objects;
         public List<GameObject> Objects => _objects;
+        protected List<GameObject> _gettedObjects;
 
         
         public uint AmountToPool
@@ -26,6 +27,15 @@ namespace ToonBlastClone.Components.Patterns
             {
                 AddNewObject();
             }
+        }
+        
+        public void ClearPool()
+        {
+            foreach (var gettedObject in _gettedObjects)
+            {
+                gettedObject.SetActive(isAllObjectActive);
+            }
+            _gettedObjects.Clear();
         }
 
         protected abstract void AddNewObject();

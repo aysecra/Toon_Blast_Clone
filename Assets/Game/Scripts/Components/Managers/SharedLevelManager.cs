@@ -19,6 +19,12 @@ namespace ToonBlastClone.Components.Manager
             return (CollectedBlock) ((PoolableObjectPool) _collectedPool).GetPooledObject();
         }
 
+        public void ClearAll()
+        {
+            _collectedPool.ClearPool();
+            _rocketPool.ClearPool();
+        }
+
         public GameObject GetRocket()
         {
             GameObject result = _rocketPool.GetObject();

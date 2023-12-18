@@ -10,7 +10,6 @@ namespace ToonBlastClone.Enums
     public enum LevelState
     {
         Opened,
-        Started,
         Paused,
         Failed,
         Completed

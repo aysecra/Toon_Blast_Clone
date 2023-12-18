@@ -1,12 +1,14 @@
 using System;
 using ToonBlastClone.ScriptableObjects;
+using UnityEngine;
 
 namespace ToonBlastClone.Data
 {
     [Serializable]
     public class GoalBlockData
     {
-        public BlockSO BlockType;
-        public uint BlockCount;
+        [SerializeField] public int Index;
+        [SerializeField] public BlockSO BlockType;
+        [SerializeField] public int BlockCount;
     }
 }

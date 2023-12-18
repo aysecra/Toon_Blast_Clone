@@ -17,10 +17,7 @@ namespace ToonBlastClone.ScriptableObjects
         [SerializeField] private FallingSO fallingSO;
         [SerializeField] private SpawningSO spawningSO;
         [SerializeField] private float fallDurationPerCell;
-
-        [SerializeField] private SimpleAudioEvent collectAudio;
-        public SimpleAudioEvent CollectAudio => collectAudio;
-
+        
         public void Touch(CellData touchedCell, GridGenerator gridGenerator)
         {
             GUIManager.Instance.DecreaseMove();

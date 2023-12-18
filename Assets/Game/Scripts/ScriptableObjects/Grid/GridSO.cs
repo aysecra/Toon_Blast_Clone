@@ -16,6 +16,7 @@ namespace ToonBlastClone.ScriptableObjects
         private LevelData _levelData;
         private GameData _gameData;
         private int _moveCount;
+        private List<GoalBlockData> _goalList;
 
         public Vector2Int CellAmount => _cellAmount;
 
@@ -25,9 +26,12 @@ namespace ToonBlastClone.ScriptableObjects
 
         public int MoveCount => _moveCount;
 
+        public List<GoalBlockData> GoalList => _goalList;
+
         public void SetGridData(Vector2Int amount, List<BlockIndexData> gridData, List<GoalBlockData> goalList, int moveCount)
         {
             _cellAmount = amount;
+            _goalList = goalList;
             if (_gameData == null || _levelData == null)
             {
                 LoadData();
@@ -72,6 +76,7 @@ namespace ToonBlastClone.ScriptableObjects
         {
             LoadData();
             _cellAmount = _levelData!.CellAmount;
+            _goalList = _levelData!.Goals;
             _moveCount = _levelData!.MoveCount;
             return _levelData!.GridData;
         }
@@ -123,6 +128,7 @@ namespace ToonBlastClone.ScriptableObjects
                 {
                     _levelData = levelData;
                     _cellAmount = levelData.CellAmount;
+                    _goalList = levelData.Goals;
                     isContain = true;
                     break;
                 }

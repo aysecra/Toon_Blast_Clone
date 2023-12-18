@@ -24,9 +24,7 @@ namespace ToonBlastClone.Editor
         readonly Vector2 _scrollSize = new Vector2(2000, 2000);
         private Vector2 _cellSize = new Vector2(35, 35);
         private Vector2Int _cellAmount;
-        private int[] _selectedGoal = new int[3];
-        private int[] _goalAmount = new int[3];
-        private GoalBlockData[] goalArray = new GoalBlockData[3];
+        private GoalBlockData[] _goalArray;
         private int _moveCount;
 
         [MenuItem("Window/Level Editor")]
@@ -39,11 +37,6 @@ namespace ToonBlastClone.Editor
 
         private void Awake()
         {
-            for (int i = 0; i < _selectedGoal.Length; i++)
-            {
-                _selectedGoal[i] = 0;
-            }
-
             _gameBoard = GameObject.FindObjectOfType<GameBoardGenerator>();
             GridSO gridSO = _gameBoard.GridSo;
             _placeableBlockList = _gameBoard.PlaceableBlock.BlockList;
@@ -51,6 +44,20 @@ namespace ToonBlastClone.Editor
             List<BlockIndexData> indexDatas = gridSO.GetGridData();
             _cellAmount = gridSO.CellAmount;
             _moveCount = gridSO.MoveCount;
+            _goalArray = new GoalBlockData[3];
+            bool isGoalNull = gridSO.GoalList == null || gridSO.GoalList.Count == 0;
+
+            for (int i = 0; i < _goalArray.Length; i++)
+            {
+                _goalArray[i] = isGoalNull
+                    ? new GoalBlockData()
+                    {
+                        Index = 0,
+                        BlockType = null,
+                        BlockCount = 0
+                    }
+                    : gridSO.GoalList[i];
+            }
 
             if (indexDatas is {Count: > 0})
             {
@@ -97,7 +104,7 @@ namespace ToonBlastClone.Editor
             if (GUILayout.Button("Generate", guiStyle))
             {
                 SetIndexDatas();
-                _gameBoard.Generate(_indexDatas, _cellAmount, goalArray.ToList(), _moveCount);
+                _gameBoard.Generate(_indexDatas, _cellAmount, _goalArray.ToList(), _moveCount);
             }
 
             if (GUILayout.Button("Random Generate", guiStyle))
@@ -176,7 +183,7 @@ namespace ToonBlastClone.Editor
         private void GoalView()
         {
             _moveCount = EditorGUILayout.IntField("Move Count: ", _moveCount);
-            
+
             string[] options = new string[_placeableBlockList.Count + 1];
             options[0] = "None";
 
@@ -185,16 +192,17 @@ namespace ToonBlastClone.Editor
                 options[i + 1] = _placeableBlockList[i].name;
             }
 
-            for (int i = 0; i < _selectedGoal.Length; i++)
+            for (int i = 0; i < _goalArray.Length; i++)
             {
-                _selectedGoal[i] = EditorGUILayout.Popup($"{i + 1} - Goal: ", _selectedGoal[i], options);
+                _goalArray[i].Index = EditorGUILayout.Popup($"{i + 1} - Goal: ", _goalArray[i].Index, options);
 
                 EditorGUILayout.BeginHorizontal();
-                Texture2D img = _selectedGoal[i] - 1 >= 0
-                    ? _placeableBlockList[_selectedGoal[i] - 1].Image.texture
-                    : default;
+                _goalArray[i].BlockType = _goalArray[i].Index - 1 >= 0
+                    ? _placeableBlockList[_goalArray[i].Index - 1]
+                    : null;
+                Texture2D img = _goalArray[i].BlockType != null ? _goalArray[i].BlockType.Image.texture : default;
                 GUILayout.Label(img, GUILayout.Width(_cellSize.x), GUILayout.Height(_cellSize.y));
-                _goalAmount[i] = EditorGUILayout.IntField("Amount: ", _goalAmount[i]);
+                _goalArray[i].BlockCount = EditorGUILayout.IntField("Amount: ", _goalArray[i].BlockCount);
                 EditorGUILayout.EndHorizontal();
             }
         }

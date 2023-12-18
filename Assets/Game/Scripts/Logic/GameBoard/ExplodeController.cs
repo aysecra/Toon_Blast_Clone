@@ -22,7 +22,7 @@ namespace ToonBlastClone.Logic
                 }
 
                 IExplodable explodableElement = (IExplodable) explodeCell.BlockSO;
-                GUIManager.Instance.DecreaseGoal(explodeCell.BlockSO, explodeCell.CellObject.transform.position);
+                GUIManager.Instance.GoalMovement(explodeCell.BlockSO, explodeCell.CellObject.transform.position);
                 explodableElement.Explode(explodeCell, SharedLevelManager.Instance.GetParticle(),
                     GUIManager.Instance.AudioSource);
             }
