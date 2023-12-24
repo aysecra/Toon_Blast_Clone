@@ -260,14 +260,6 @@ MonoBehaviour:
     GoalText: {fileID: 8025432712946467236}
   - GoalImage: {fileID: 4532913018189305803}
     GoalText: {fileID: 4532913019254818021}
-  goalImage:
-  - {fileID: 782689502154801915}
-  - {fileID: 8025432714012185226}
-  - {fileID: 4532913018189305803}
-  goalText:
-  - {fileID: 782689503236772309}
-  - {fileID: 8025432712946467236}
-  - {fileID: 4532913019254818021}
   moveText: {fileID: 782689501908287568}
 --- !u!82 &531975119894011475
 AudioSource:
@@ -919,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1089864306536834215, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
