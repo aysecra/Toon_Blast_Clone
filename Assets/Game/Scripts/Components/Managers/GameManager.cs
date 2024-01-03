@@ -17,14 +17,16 @@ namespace ToonBlastClone.Components.Manager
         public void SetLevelCompleted()
         {
             SharedLevelManager.Instance.ClearAll();
-            DOTween.KillAll();
+            // DOTween.KillAll();
+            DOTween.Clear(true);
             LoadNextLevel();
         }
 
         public void SetLevelFailed()
         {
             SharedLevelManager.Instance.ClearAll();
-            DOTween.KillAll();
+            // DOTween.KillAll();
+            DOTween.Clear(true);
             ReloadLevel();
         }
 

@@ -3,24 +3,24 @@
     {
       "GridSoName": "Grid_Level1",
       "CellAmount": {
-        "x": 6,
+        "x": 7,
         "y": 10
       },
       "MoveCount": 25,
       "Goals": [
         {
-          "Index": 1,
+          "Index": 7,
           "BlockType": {
-            "instanceID": 24852
+            "instanceID": 24858
           },
-          "BlockCount": 5
+          "BlockCount": 4
         },
         {
-          "Index": 3,
+          "Index": 6,
           "BlockType": {
             "instanceID": 24856
           },
-          "BlockCount": 10
+          "BlockCount": 14
         },
         {
           "Index": 0,
@@ -32,14 +32,14 @@
       ],
       "GridData": [
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 0,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 0,
             "y": 1
@@ -53,14 +53,14 @@
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 0,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 0,
             "y": 4
@@ -74,14 +74,14 @@
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 0,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 0,
             "y": 7
@@ -95,70 +95,70 @@
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 0,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 1,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 1,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 1,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 1,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 1,
             "y": 8
@@ -179,119 +179,119 @@
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 2,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 2,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 2,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 2,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 2,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 2,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 2,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 2,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 2,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 3,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 3,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 3,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 3,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 3,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 3,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 3,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 3,
             "y": 7
@@ -305,14 +305,14 @@
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 3,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 4,
             "y": 0
@@ -326,63 +326,63 @@
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 4,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 4,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 4,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 4,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 4,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 4,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 4,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 4,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 5,
             "y": 0
@@ -396,35 +396,35 @@
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 5,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 5,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 5,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 5,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 5,
             "y": 6
@@ -438,16 +438,86 @@
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 5,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 5,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 6,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 6,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 6,
             "y": 9
           }
         }
@@ -456,24 +526,24 @@
     {
       "GridSoName": "Grid_Level1",
       "CellAmount": {
-        "x": 6,
+        "x": 7,
         "y": 10
       },
       "MoveCount": 25,
       "Goals": [
         {
-          "Index": 1,
+          "Index": 7,
           "BlockType": {
-            "instanceID": 24852
+            "instanceID": 24858
           },
-          "BlockCount": 5
+          "BlockCount": 4
         },
         {
-          "Index": 3,
+          "Index": 6,
           "BlockType": {
             "instanceID": 24856
           },
-          "BlockCount": 10
+          "BlockCount": 14
         },
         {
           "Index": 0,
@@ -485,14 +555,14 @@
       ],
       "GridData": [
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 0,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 0,
             "y": 1
@@ -506,14 +576,14 @@
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 0,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 0,
             "y": 4
@@ -527,14 +597,14 @@
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 0,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 0,
             "y": 7
@@ -548,70 +618,70 @@
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 0,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 1,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 1,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 1,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 1,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 1,
             "y": 8
@@ -632,119 +702,119 @@
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 2,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 2,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 2,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 2,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 2,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 2,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 2,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 2,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 2,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 3,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 3,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 3,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 3,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 3,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 3,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 3,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 3,
             "y": 7
@@ -758,14 +828,14 @@
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 3,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 4,
             "y": 0
@@ -779,63 +849,63 @@
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 4,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 4,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 4,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 4,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 4,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 4,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 4,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 4,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 5,
             "y": 0
@@ -849,35 +919,35 @@
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 5,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 5,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 5,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 5,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 5,
             "y": 6
@@ -891,16 +961,86 @@
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 5,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 5,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 6,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 6,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 6,
             "y": 9
           }
         }
@@ -909,24 +1049,24 @@
     {
       "GridSoName": "Grid_Level1",
       "CellAmount": {
-        "x": 6,
+        "x": 7,
         "y": 10
       },
       "MoveCount": 25,
       "Goals": [
         {
-          "Index": 1,
+          "Index": 7,
           "BlockType": {
-            "instanceID": 24852
+            "instanceID": 24858
           },
-          "BlockCount": 5
+          "BlockCount": 4
         },
         {
-          "Index": 3,
+          "Index": 6,
           "BlockType": {
             "instanceID": 24856
           },
-          "BlockCount": 10
+          "BlockCount": 14
         },
         {
           "Index": 0,
@@ -938,14 +1078,14 @@
       ],
       "GridData": [
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 0,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 0,
             "y": 1
@@ -959,14 +1099,14 @@
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 0,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 0,
             "y": 4
@@ -980,14 +1120,14 @@
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 0,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 0,
             "y": 7
@@ -1001,70 +1141,70 @@
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 0,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 1,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 1,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 1,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 1,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 1,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 1,
             "y": 8
@@ -1085,119 +1225,119 @@
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 2,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 2,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 2,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 2,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 2,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 2,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 2,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 2,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 2,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 3,
             "y": 0
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 3,
             "y": 1
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 3,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 3,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 3,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 3,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 3,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 2,
           "GridIndex": {
             "x": 3,
             "y": 7
@@ -1211,14 +1351,14 @@
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 3,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 4,
             "y": 0
@@ -1232,63 +1372,63 @@
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 4,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 4,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 4,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 4,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 4,
             "y": 6
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 4,
             "y": 7
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 4,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 6,
           "GridIndex": {
             "x": 4,
             "y": 9
           }
         },
         {
-          "PlaceableIndex": 1,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 5,
             "y": 0
@@ -1302,35 +1442,35 @@
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 0,
           "GridIndex": {
             "x": 5,
             "y": 2
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 5,
             "y": 3
           }
         },
         {
-          "PlaceableIndex": 0,
+          "PlaceableIndex": 5,
           "GridIndex": {
             "x": 5,
             "y": 4
           }
         },
         {
-          "PlaceableIndex": 3,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 5,
             "y": 5
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 4,
           "GridIndex": {
             "x": 5,
             "y": 6
@@ -1344,16 +1484,609 @@
           }
         },
         {
-          "PlaceableIndex": 4,
+          "PlaceableIndex": 1,
           "GridIndex": {
             "x": 5,
             "y": 8
           }
         },
         {
-          "PlaceableIndex": 2,
+          "PlaceableIndex": 3,
           "GridIndex": {
             "x": 5,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 6,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 6,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 6,
+            "y": 9
+          }
+        }
+      ]
+    },
+    {
+      "GridSoName": "Grid_Level1",
+      "CellAmount": {
+        "x": 7,
+        "y": 10
+      },
+      "MoveCount": 25,
+      "Goals": [
+        {
+          "Index": 7,
+          "BlockType": {
+            "instanceID": 24858
+          },
+          "BlockCount": 4
+        },
+        {
+          "Index": 6,
+          "BlockType": {
+            "instanceID": 24856
+          },
+          "BlockCount": 14
+        },
+        {
+          "Index": 0,
+          "BlockType": {
+            "instanceID": 0
+          },
+          "BlockCount": 0
+        }
+      ],
+      "GridData": [
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 0,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 0,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 0,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 0,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 1,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 1,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 1,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 1,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 1,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 1,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 1,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 1,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 2,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 2,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 2,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 2,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 2,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 2,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 2,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 2,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 2,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 3,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 3,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 3,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 3,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 3,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 3,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 3,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 3,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 3,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 4,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 4,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 4,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 4,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 4,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 4,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 4,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 4,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 4,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 4,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 5,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 5,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 5,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 5,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 5,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 5,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 5,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 5,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 5,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 5,
+            "y": 9
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 0
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 1
+          }
+        },
+        {
+          "PlaceableIndex": 0,
+          "GridIndex": {
+            "x": 6,
+            "y": 2
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "PlaceableIndex": 5,
+          "GridIndex": {
+            "x": 6,
+            "y": 4
+          }
+        },
+        {
+          "PlaceableIndex": 2,
+          "GridIndex": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        {
+          "PlaceableIndex": 3,
+          "GridIndex": {
+            "x": 6,
+            "y": 6
+          }
+        },
+        {
+          "PlaceableIndex": 4,
+          "GridIndex": {
+            "x": 6,
+            "y": 7
+          }
+        },
+        {
+          "PlaceableIndex": 1,
+          "GridIndex": {
+            "x": 6,
+            "y": 8
+          }
+        },
+        {
+          "PlaceableIndex": 6,
+          "GridIndex": {
+            "x": 6,
             "y": 9
           }
         }

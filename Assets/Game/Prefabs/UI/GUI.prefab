@@ -697,6 +697,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 782689503482176623}
     m_Modifications:
+    - target: {fileID: 1089864305455069067, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
+      propertyPath: m_text
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089864306536834213, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06ea5ce2c93fa4bcab3ba1e9ce32b869, type: 3}
     - target: {fileID: 1089864306536834214, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -784,6 +792,10 @@ PrefabInstance:
     - target: {fileID: 1089864306536834215, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_Name
       value: GoalElement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089864306536834215, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
@@ -951,12 +963,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1089864305455069067, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_text
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1089864306536834213, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 90e44b393cec24cab94074c4ba5d34f5, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e03258923300407ab1591376d26ed1f, type: 3}
     - target: {fileID: 1089864306536834214, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1044,6 +1056,10 @@ PrefabInstance:
     - target: {fileID: 1089864306536834215, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
       propertyPath: m_Name
       value: GoalElement (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089864306536834215, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bec7638dd52e4368bf0d21a35fe4364, type: 3}
